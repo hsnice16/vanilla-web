@@ -1,0 +1,130 @@
+:root {
+  --background-color: #212121;
+  --font-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  text-align: center;
+  font-size: 4.4rem;
+  padding: 4rem 0 3.6rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  flex: 1;
+  width: 100%;
+}
+
+/* aside */
+
+.side-navs {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  gap: 2rem;
+}
+
+.side-navs > .side-nav-action {
+  background-color: transparent;
+  color: var(--font-color);
+  border: thin solid var(--font-color);
+  padding: 1.6rem 3.6rem;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* main content */
+
+.preview-container {
+  flex: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.preview-frame {
+  width: 100%;
+  height: 100%;
+  border: thin solid var(--font-color);
+  border-radius: 0.4rem;
+}
+
+.preview-frame.show {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.preview-frame.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.preview-container .spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+  position: absolute;
+  width: 100%;
+}
+
+.spinner-container.show {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.spinner-container.hide {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.spinner-container > img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.footer .footer-link {
+  text-decoration: none;
+  color: var(--text-color);
+}

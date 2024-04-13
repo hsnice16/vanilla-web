@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Web</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="hero-text">Vanilla Web</h1>
+    </header>
+
+    <div class="container">
+      <aside>
+        <nav class="side-navs">
+          <button
+            class="side-nav-action"
+            data-href="./infinite-scrolling-carousel/index.html"
+          >
+            Infinite Scrolling Carousel
+          </button>
+          <button
+            class="side-nav-action"
+            data-href="./dropdown-animation/index.html"
+          >
+            Dropdown Animation
+          </button>
+          <button
+            class="side-nav-action"
+            data-href="./gradient-border-text/index.html"
+          >
+            Gradient Border Text
+          </button>
+        </nav>
+      </aside>
+
+      <main class="preview-container">
+        <div class="spinner-container hide">
+          <img src="./spinner.svg" alt="fetching the content..." />
+        </div>
+
+        <iframe
+          src="./infinite-scrolling-carousel/index.html"
+          class="preview-frame show"
+        ></iframe>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <a
+        target="_blank"
+        href="https://github.com/hsnice16/vanilla-web"
+        class="footer-link"
+        >GitHub</a
+      >
+      <span>•</span>
+      <a
+        target="_blank"
+        href="https://github.com/sponsors/hsnice16"
+        class="footer-link"
+        >Sponsor</a
+      >
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

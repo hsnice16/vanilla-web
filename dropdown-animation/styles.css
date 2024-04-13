@@ -3,6 +3,7 @@ html {
   color: #fff;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
