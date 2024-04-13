@@ -15,23 +15,25 @@ html {
   color: #fff;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
   font-family: sans-serif;
   font-size: 1.6rem;
   min-height: 100vh;
+  display: flex;
 }
 
 .button-gradient {
-  padding: 0.75rem 1.25rem;
+  margin: auto;
   background: var(--primary-gradient-color);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   position: relative;
-  width: 16rem;
-  height: 4rem;
+  width: 32rem;
+  height: 6rem;
   overflow: hidden;
 }
 
@@ -53,7 +55,7 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-family: "Inter", sans-serif;
   font-weight: 500;
 
