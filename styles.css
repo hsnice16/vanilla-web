@@ -49,7 +49,7 @@ body {
 /* aside */
 
 .side-tabs {
-  max-height: 60rem;
+  max-height: calc(100vh - 20rem);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
