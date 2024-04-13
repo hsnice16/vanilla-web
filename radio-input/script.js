@@ -1,0 +1,20 @@
+const formEle = document.getElementsByTagName("form")[0];
+const innerCircleElements = document.getElementsByClassName("inner-circle");
+
+const handleClickEvent = (event) => {
+  if (event.target.tagName === "INPUT" && event.target.type === "radio") {
+    let clickedInnerCircle;
+
+    Array.from(innerCircleElements).forEach((ele) => {
+      ele.classList.remove("checked-state");
+
+      if (ele.dataset.for === event.target.id) {
+        clickedInnerCircle = ele;
+      }
+    });
+
+    clickedInnerCircle.classList.add("checked-state");
+  }
+};
+
+formEle.addEventListener("click", handleClickEvent);

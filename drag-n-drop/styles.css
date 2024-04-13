@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap");
+
+:root {
+  --background-color: black;
+
+  --box-border-color: #166534;
+  --box-inner-color: #15803d;
+
+  --text-color: #e3e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+  user-select: none;
+}
+
+.draggable {
+  align-items: center;
+  background: radial-gradient(var(--box-inner-color), var(--box-border-color));
+  border: 0.5rem solid var(--background-color);
+  display: flex;
+  font-size: 2rem;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  cursor: grab;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.list-item {
+  border: thin solid var(--box-border-color);
+  height: 8rem;
+  position: relative;
+  width: 8rem;
+}

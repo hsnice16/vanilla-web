@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap");
+
+:root {
+  --background-color: black;
+  --btn-background-color: #8b5cf6;
+
+  --ripple-background-color: #f5f3ff;
+  --text-color: #e3e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  user-select: none;
+  min-height: 100vh;
+}
+
+button {
+  margin: auto;
+  background-color: var(--btn-background-color);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0 0.25rem #a78bfa;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  padding: 1rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:active {
+  box-shadow: 0.075rem 0.075rem 0 0.15rem #a78bfa;
+  transform: scale(0.99);
+}
+
+span.ripple {
+  animation: scale 0.75s linear;
+  background-color: var(--ripple-background-color);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.5;
+  transform: scale(0);
+}
+
+@keyframes scale {
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}

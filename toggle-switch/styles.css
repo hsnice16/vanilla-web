@@ -1,0 +1,49 @@
+:root {
+  --background-color: black;
+  --border-color: #64748b;
+  --circle-color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--background-color);
+  font-size: 62.5%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-size: 1.6rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  border: thin solid var(--border-color);
+  border-radius: 20rem;
+  cursor: pointer;
+  height: 5rem;
+  position: relative;
+  width: 10rem;
+}
+
+.circle {
+  background-color: var(--circle-color);
+  border: thick solid var(--background-color);
+  border-radius: 50%;
+  height: calc(100% - 0.1rem);
+  position: absolute;
+  right: 48%;
+  transition: right 0.75s, background-color 0.75s;
+  width: 50%;
+}
+
+.right-0 {
+  background-color: var(--border-color);
+  right: 2%;
+}
