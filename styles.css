@@ -1,6 +1,8 @@
 :root {
   --background-color: #212121;
   --font-color: #fff;
+  --font-secondary-color: #cdcdcd;
+  --active-color: #22c55e;
 }
 
 *,
@@ -33,41 +35,49 @@ body {
 }
 
 .container {
-  max-width: 120rem;
+  max-width: 116rem;
   margin: auto;
   display: flex;
-  gap: 2rem;
   height: 100%;
   flex: 1;
   width: 100%;
+  border: thin solid var(--font-secondary-color);
+  border-radius: 1.6rem;
+  overflow: hidden;
 }
 
 /* aside */
 
-.side-navs {
+.side-tabs {
+  border-right: thin solid var(--font-secondary-color);
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
-  gap: 2rem;
+  width: 30rem;
 }
 
-.side-navs > .side-nav-action {
+.side-tabs > .side-tab-action {
   background-color: transparent;
-  color: var(--font-color);
-  border: thin solid var(--font-color);
-  padding: 1.6rem 3.6rem;
-  font-size: 1.6rem;
-  border-radius: 0.8rem;
+  color: var(--font-secondary-color);
+  border: none;
+  border-bottom: thin solid var(--font-secondary-color);
+  padding: 1.8rem 1.6rem;
+  font-size: 1.8rem;
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-tab {
+  color: var(--active-color);
+  transition: color 0.3s;
 }
 
 /* main content */
 
 .preview-container {
   flex: 1;
-  border-radius: 0.4rem;
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -76,8 +86,7 @@ body {
 .preview-frame {
   width: 100%;
   height: 100%;
-  border: thin solid var(--font-color);
-  border-radius: 0.4rem;
+  border: none;
 }
 
 .preview-frame.show {

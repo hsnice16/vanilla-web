@@ -1,6 +1,7 @@
 const previewFrame = document.getElementsByClassName("preview-frame")[0];
-const sidenavActions = document.getElementsByClassName("side-nav-action");
+const sidetabActions = document.getElementsByClassName("side-tab-action");
 const spinnerElement = document.getElementsByClassName("spinner-container")[0];
+let lastActiveTabSpan = sidetabActions[0].children[0];
 
 function showSpinner() {
   previewFrame.classList.remove("show");
@@ -18,19 +19,22 @@ function hideSpinner() {
   previewFrame.classList.add("show");
 }
 
-[...sidenavActions].forEach((sidenavAction) => {
-  function handleAnchorClick() {
-    showSpinner();
+[...sidetabActions].forEach((sidetabAction) => {
+  function handleAnchorClick(event) {
+    lastActiveTabSpan.classList.remove("active-tab");
+    lastActiveTabSpan = event.target.children[0];
+    lastActiveTabSpan.classList.add("active-tab");
 
+    showSpinner();
     function handleFrameLoad() {
       hideSpinner();
       previewFrame.removeEventListener("load", handleFrameLoad);
     }
 
-    const href = sidenavAction.dataset.href;
+    const href = sidetabAction.dataset.href;
     previewFrame.src = href;
     previewFrame.addEventListener("load", handleFrameLoad);
   }
 
-  sidenavAction.addEventListener("click", handleAnchorClick);
+  sidetabAction.addEventListener("click", handleAnchorClick);
 });
