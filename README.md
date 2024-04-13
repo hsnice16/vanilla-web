@@ -22,9 +22,17 @@ Vanilla Web has code for UI Components written in `HTML5`, `CSS3`, and `JavaScri
 
 In Vanilla Web, you can find code for the following components.
 
+- [Checkbox Input](https://github.com/hsnice16/vanilla-web/tree/main/checkbox-input)
+- [Drag n Drop](https://github.com/hsnice16/vanilla-web/tree/main/drag-n-drop)
 - [Dropdown Animation](https://github.com/hsnice16/vanilla-web/tree/main/dropdown-animation)
 - [Gradient Border Text](https://github.com/hsnice16/vanilla-web/tree/main/gradient-border-text)
 - [Infinite Scrolling Carousel](https://github.com/hsnice16/vanilla-web/tree/main/infinite-scrolling-carousel)
+- [Parallax Scroll](https://github.com/hsnice16/vanilla-web/tree/main/parallax-scroll)
+- [Radio Input](https://github.com/hsnice16/vanilla-web/tree/main/radio-input)
+- [Ripple Effect](https://github.com/hsnice16/vanilla-web/tree/main/ripple-effect)
+- [Scrollable Tab](https://github.com/hsnice16/vanilla-web/tree/main/scrollable-tab)
+- [Shimmer Card](https://github.com/hsnice16/vanilla-web/tree/main/shimmer-card)
+- [Toggle Switch](https://github.com/hsnice16/vanilla-web/tree/main/toggle-switch)
 
 ---
 

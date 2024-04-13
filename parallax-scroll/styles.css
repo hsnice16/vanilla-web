@@ -1,0 +1,98 @@
+:root {
+  --background-color: black;
+  --text-color: #f97316;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  display: flex;
+  padding: 4rem;
+  gap: 4rem;
+}
+
+.container-one {
+  min-height: calc(100vh + 100px);
+  background-image: url(https://images.unsplash.com/photo-1694537745700-b4a03c2a9043?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80);
+}
+
+.container-two {
+  min-height: calc(100vh + 200px);
+  background-image: url(https://images.unsplash.com/photo-1671937766989-af87081d72f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80);
+}
+
+.container-three {
+  min-height: calc(100vh + 300px);
+  background-image: url(https://images.unsplash.com/photo-1574063783063-c22803a07819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2726&q=80);
+}
+
+.container-four {
+  min-height: calc(100vh + 400px);
+  background-image: url(https://images.unsplash.com/photo-1684131247167-7afe1f7ae5aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2789&q=80);
+}
+
+.container-five {
+  min-height: calc(100vh + 500px);
+  background-image: url(https://images.unsplash.com/photo-1583475020839-105dddecc00a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80);
+}
+
+.para {
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+
+.para-one {
+  width: 30rem;
+  height: 50rem;
+}
+
+.para-two {
+  width: 50rem;
+  height: 30rem;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.para-three {
+  width: 40rem;
+  height: 60rem;
+  margin: auto;
+}
+
+.para-four {
+  width: 30rem;
+  height: 30rem;
+  margin-left: auto;
+}
+
+.para-five {
+  width: 90rem;
+  height: 7rem;
+  align-self: flex-end;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  gap: 0.75rem;
+}
+
+.para-five a {
+  text-decoration: none;
+  color: var(--text-color);
+}

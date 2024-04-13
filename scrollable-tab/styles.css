@@ -1,0 +1,51 @@
+:root {
+  --COLOR-PRIMARY: #3b82f6;
+  --COLOR-SECONDARY: #f1f5f9;
+  --COLOR-SECONDARY-200: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.slider {
+  background: var(--COLOR-PRIMARY);
+  bottom: 0;
+  display: block;
+  height: 5px;
+  position: absolute;
+  transition: left 0.5s ease-out;
+  width: calc(100% / 4);
+}
+
+.tab {
+  background: var(--COLOR-SECONDARY);
+  margin: auto;
+  position: relative;
+  width: 28rem;
+}
+
+.tab-link {
+  color: var(--COLOR-PRIMARY);
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  width: calc(100% / 4);
+}
+
+.tab-link:hover {
+  background: var(--COLOR-SECONDARY-200);
+}
