@@ -41,17 +41,4 @@
 
     sidetabAction.addEventListener("click", handleAnchorClick);
   });
-
-  function handleResizeEvent(event) {
-    var browserZoomLevel = Math.round((window.devicePixelRatio * 100) / 2);
-    console.log(browserZoomLevel);
-
-    if (browserZoomLevel < 100) {
-      sideTabsElement.style.maxHeight = "100%";
-    } else {
-      sideTabsElement.style.maxHeight = "60rem";
-    }
-  }
-
-  addEventListener("resize", handleResizeEvent);
 })();
