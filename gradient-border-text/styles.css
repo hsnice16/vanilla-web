@@ -1,0 +1,66 @@
+:root {
+  --background-color: black;
+
+  --primary-color: #2fa3ff;
+  --primary-dark-color: #2f57ff;
+  --primary-gradient-color: linear-gradient(
+    97.63deg,
+    var(--primary-dark-color) 0%,
+    var(--primary-color) 108.45%
+  );
+}
+
+html {
+  background-color: var(--background-color);
+  color: #fff;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+.button-gradient {
+  padding: 0.75rem 1.25rem;
+  background: var(--primary-gradient-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  width: 16rem;
+  height: 4rem;
+  overflow: hidden;
+}
+
+.button-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0.15rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-color);
+}
+
+.button-gradient > span {
+  background-color: var(--primary-dark-color);
+  background-image: var(--primary-gradient-color);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
