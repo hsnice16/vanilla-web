@@ -1,10 +1,10 @@
 (function () {
+  const htmlElement = document.documentElement;
   const previewFrame = document.getElementsByClassName("preview-frame")[0];
-  const sideTabsElement = document.getElementsByClassName("side-tabs")[0];
   const sidetabActions = document.getElementsByClassName("side-tab-action");
   const spinnerElement =
     document.getElementsByClassName("spinner-container")[0];
-  let lastActiveTabSpan = sidetabActions[0].children[0];
+  let lastActiveTab = sidetabActions[0];
 
   function showSpinner() {
     previewFrame.classList.remove("show");
@@ -24,9 +24,9 @@
 
   [...sidetabActions].forEach((sidetabAction) => {
     function handleAnchorClick(event) {
-      lastActiveTabSpan.classList.remove("active-tab");
-      lastActiveTabSpan = event.target.children[0];
-      lastActiveTabSpan.classList.add("active-tab");
+      lastActiveTab.classList.remove("active-tab");
+      lastActiveTab = event.target;
+      lastActiveTab.classList.add("active-tab");
 
       showSpinner();
       function handleFrameLoad() {
@@ -41,4 +41,10 @@
 
     sidetabAction.addEventListener("click", handleAnchorClick);
   });
+
+  // theme initially as system
+  const theme = matchMedia("(prefers-color-scheme: dark)");
+  if (theme.matches) {
+    htmlElement.setAttribute("data-theme", "dark");
+  }
 })();

@@ -1,7 +1,12 @@
 :root {
+  --background-color: #f8fafc;
   --COLOR-PRIMARY: #3b82f6;
   --COLOR-SECONDARY: #f1f5f9;
   --COLOR-SECONDARY-200: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  --background-color: black;
 }
 
 * {
@@ -11,7 +16,7 @@
 }
 
 html {
-  background-color: black;
+  background-color: var(--background-color);
 }
 
 body {

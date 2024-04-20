@@ -1,7 +1,11 @@
 :root {
-  --background-color: black;
+  --background-color: #f8fafc;
   --border-color: #64748b;
   --circle-color: #334155;
+}
+
+[data-theme="dark"] {
+  --background-color: black;
 }
 
 * {
