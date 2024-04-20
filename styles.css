@@ -173,3 +173,7 @@ body {
   width: 2.8rem;
   height: 2.8rem;
 }
+
+.spinner-container .spinner_z9k8 {
+  fill: var(--font-secondary-color);
+}
