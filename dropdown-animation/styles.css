@@ -1,6 +1,18 @@
+:root {
+  --background-color: #f8fafc;
+  --text-color: #5f656f;
+  --dropdown-title-background-color: #d9e7f4;
+}
+
+[data-theme="dark"] {
+  --background-color: black;
+  --text-color: #e3e8f0;
+  --dropdown-title-background-color: #212121;
+}
+
 html {
-  background-color: black;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -19,14 +31,13 @@ body {
 }
 
 .dropdown-animate {
-  /* dropdown-items height: 36rem */
   margin-top: 40rem;
   transition: margin-top 0.1s ease-in;
 }
 
 .dropdown-title {
   align-items: center;
-  background-color: #212121;
+  background-color: var(--dropdown-title-background-color);
   border-radius: 1.5rem;
   cursor: pointer;
   display: flex;

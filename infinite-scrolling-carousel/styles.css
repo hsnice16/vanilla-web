@@ -1,6 +1,16 @@
+:root {
+  --background-color: #f8fafc;
+  --text-color: #5f656f;
+}
+
+[data-theme="dark"] {
+  --background-color: black;
+  --text-color: #e3e8f0;
+}
+
 html {
-  background-color: black;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow: hidden;

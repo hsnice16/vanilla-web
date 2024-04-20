@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap");
 
 :root {
-  --background-color: black;
-
+  --background-color: #f8fafc;
   --radio-border-color: #166534;
   --radio-inner-color: #15803d;
+  --text-color: #5f656f;
+}
 
+[data-theme="dark"] {
+  --background-color: black;
   --text-color: #e3e8f0;
 }
 

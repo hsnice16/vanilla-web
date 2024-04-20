@@ -1,19 +1,15 @@
 :root {
   --background-color: #f8fafc;
-
   --box-inner-shadow-color: #e2e8f0;
   --box-outer-shadow-color: #cbd5e1;
-
   --container-background-color: white;
 }
 
 /* dark */
 [data-theme="dark"] {
   --background-color: black;
-
   --box-inner-shadow-color: #52525b;
   --box-outer-shadow-color: #3f3f46;
-
   --container-background-color: #3f3f46;
 }
 

@@ -1,6 +1,5 @@
 :root {
-  --background-color: black;
-
+  --background-color: #f8fafc;
   --primary-color: #2fa3ff;
   --primary-dark-color: #2f57ff;
   --primary-gradient-color: linear-gradient(
@@ -8,6 +7,10 @@
     var(--primary-dark-color) 0%,
     var(--primary-color) 108.45%
   );
+}
+
+[data-theme="dark"] {
+  --background-color: black;
 }
 
 html {
