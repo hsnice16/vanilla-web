@@ -1,56 +1,67 @@
-function moveToSelected(element) {
-  if (element == "next") {
-    var selected = $(".selected").next();
-  } else if (element == "prev") {
-    var selected = $(".selected").prev();
-  } else {
-    var selected = element;
+(function main() {
+  const htmlElement = document.documentElement;
+
+  function moveToSelected(element) {
+    if (element == "next") {
+      var selected = $(".selected").next();
+    } else if (element == "prev") {
+      var selected = $(".selected").prev();
+    } else {
+      var selected = element;
+    }
+
+    var next = $(selected).next();
+    var prev = $(selected).prev();
+    var prevSecond = $(prev).prev();
+    var nextSecond = $(next).next();
+
+    $(selected).removeClass().addClass("selected");
+
+    $(prev).removeClass().addClass("prev");
+    $(next).removeClass().addClass("next");
+
+    $(nextSecond).removeClass().addClass("nextSecond");
+    $(prevSecond).removeClass().addClass("prevSecond");
+
+    $(nextSecond).nextAll().removeClass().addClass("hideRight");
+    $(prevSecond).prevAll().removeClass().addClass("hideLeft");
   }
 
-  var next = $(selected).next();
-  var prev = $(selected).prev();
-  var prevSecond = $(prev).prev();
-  var nextSecond = $(next).next();
+  // Keyboard events
+  $(document).keydown(function (e) {
+    e.preventDefault();
 
-  $(selected).removeClass().addClass("selected");
+    switch (e.which) {
+      case 37:
+        moveToSelected("prev");
+        break;
 
-  $(prev).removeClass().addClass("prev");
-  $(next).removeClass().addClass("next");
+      case 39:
+        moveToSelected("next");
+        break;
 
-  $(nextSecond).removeClass().addClass("nextSecond");
-  $(prevSecond).removeClass().addClass("prevSecond");
+      default:
+        return;
+    }
+  });
 
-  $(nextSecond).nextAll().removeClass().addClass("hideRight");
-  $(prevSecond).prevAll().removeClass().addClass("hideLeft");
-}
+  // Mouse click
+  $("#carousel div").click(function () {
+    moveToSelected($(this));
+  });
 
-// Keyboard events
-$(document).keydown(function (e) {
-  switch (e.which) {
-    case 37:
-      moveToSelected("prev");
-      break;
+  // Buttons events
+  $("#prev").click(function () {
+    moveToSelected("prev");
+  });
 
-    case 39:
-      moveToSelected("next");
-      break;
+  $("#next").click(function () {
+    moveToSelected("next");
+  });
 
-    default:
-      return;
+  // theme initially as system
+  const theme = matchMedia("(prefers-color-scheme: dark)");
+  if (theme.matches) {
+    htmlElement.setAttribute("data-theme", "dark");
   }
-  e.preventDefault();
-});
-
-// Mouse click
-$("#carousel div").click(function () {
-  moveToSelected($(this));
-});
-
-// Buttons events
-$("#prev").click(function () {
-  moveToSelected("prev");
-});
-
-$("#next").click(function () {
-  moveToSelected("next");
-});
+})();
