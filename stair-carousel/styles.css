@@ -1,37 +1,40 @@
 :root {
-  --ImgSizeX : 30vw;
-  --ImgSizeY : calc(var(--ImgSizeX) / 4 * 3);
+  --ImgSizeX: 30vw;
+  --ImgSizeY: calc(var(--ImgSizeX) / 4 * 3);
   --minFontSize: 10px;
   --maxFontSize: 32px;
   --scaler: 5vw;
-  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+
+  --background-color: #f8fafc;
+  --text-color: #5f656f;
 }
 
-*, *:before, *:after {
+/* dark */
+[data-theme="dark"] {
+  --background-color: black;
+  --text-color: #e3e8f0;
+}
+
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin-top: 10px;
-  background-color: #28292d;
-}
-
-
-h1 {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 400;
-  line-height: 2em;
-  text-align: center;
+  background-color: var(--background-color);
 }
 
 pre {
   font-size: 50%;
   text-align: center;
   margin-top: 2em;
-  color:	#fff;
+  color: var(--text-color);
 }
 
 #carousel {
@@ -50,7 +53,6 @@ pre {
 }
 
 #carousel div img {
-  
   object-fit: cover;
   object-position: top;
   width: var(--ImgSizeX);
@@ -64,8 +66,7 @@ pre {
   transform: translateY(50%) translateX(0%);
 }
 
-#carousel div.hideLeft img,
-#carousel div.hideRight img {
+#carousel div:is(.hideLeft, .hideRight) img {
   width: calc(var(--ImgSizeX) / 2);
 }
 
@@ -81,8 +82,7 @@ pre {
   transform: translateY(17.5%) translateX(-50%);
 }
 
-#carousel div.prev img,
-#carousel div.next img {
+#carousel div:is(.prev, .next) img {
   width: calc(var(--ImgSizeX) / 4 * 3);
 }
 
@@ -93,8 +93,7 @@ pre {
   opacity: 0.7;
 }
 
-#carousel div.prevSecond img,
-#carousel div.nextSecond img {
+#carousel div:is(.prevSecond, .nextSecond) img {
   width: calc(var(--ImgSizeX) / 2);
 }
 
@@ -123,12 +122,16 @@ pre {
   width: 3em;
   border: none;
   margin: auto;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 
 .buttons button {
   background: transparent;
   border: inherit;
+}
+
+.buttons button > svg polyline {
+  stroke: var(--text-color);
 }
 
 .arrow {
