@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stair Carousel</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="carousel">
+      <!-- Use of classnames
+      hideleft = img -3 is totally hidden
+      prevSecond = img -2 is reduced and set back
+      prev = img -1 is reduced and set back
+      selected = img is centered and at the first plan
+      next = img +1 is enhanced and brought to the fore
+      nextSecond = img +2 is unhidden and brought to the fore
+      hideRight = img +3 is totally hidden
+    -->
+      <div class="selected" 
+        ><img src="images/baruto.jpeg"
+      /></div>
+      <div class="next" 
+        ><img src="images/ahiru-no-sora.avif"
+      /></div>
+      <div class="nextSecond" 
+        ><img src="images/one-piece-gear-five.webp"
+      /></div>
+      <div class="hideRight" 
+        ><img src="images/haikyuu.jpeg"
+      /></div>
+      <div class="hideRight" 
+        ><img src="images/hajime-no-ippo.webp"
+      /></div>
+      <div class="hideRight" 
+        ><img src="images/inazuma-eleven.webp"
+      /></div>
+      <div class="hideRight" 
+        ><img src="images/naruto-itachi-uchiha.jpeg"
+      /></div>
+      <div class="hideRight" 
+        ><img src="images/slam-dunk.jpeg"
+      /></div>
+    </div>
+    <div class="buttons">
+      <button id="prev" class="arrow left">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 50 80"
+          xml:space="preserve"
+        >
+          <polyline
+            fill="none"
+            stroke="#fff"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            points="45.63,75.8 0.375,38.087 45.63,0.375"
+          />
+        </svg>
+      </button>
+      <button id="next" class="arrow right">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 50 80"
+          xml:space="preserve"
+        >
+          <polyline
+            fill="none"
+            stroke="#fff"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            points="0.375,0.375 45.63,38.087 0.375,75.8"
+          />
+        </svg>
+      </button>
+    </div>
+    <pre>
+  Methods to use the carousel:<br>
+    1. click on the arrows
+    2. use arrows from the keyboard
+    3. select a box with the pointer and click
+  </pre>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

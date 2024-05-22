@@ -1,0 +1,151 @@
+:root {
+  --ImgSizeX : 30vw;
+  --ImgSizeY : calc(var(--ImgSizeX) / 4 * 3);
+  --minFontSize: 10px;
+  --maxFontSize: 32px;
+  --scaler: 5vw;
+  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin-top: 10px;
+  background-color: #28292d;
+}
+
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 2em;
+  text-align: center;
+}
+
+pre {
+  font-size: 50%;
+  text-align: center;
+  margin-top: 2em;
+  color:	#fff;
+}
+
+#carousel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: var(--ImgSizeY);
+}
+
+#carousel div {
+  position: absolute;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+
+#carousel div img {
+  
+  object-fit: cover;
+  object-position: top;
+  width: var(--ImgSizeX);
+  height: 100%;
+  transition: width 1s;
+}
+
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(0%);
+}
+
+#carousel div.hideLeft img,
+#carousel div.hideRight img {
+  width: calc(var(--ImgSizeX) / 2);
+}
+
+#carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-100%);
+}
+
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(17.5%) translateX(-50%);
+}
+
+#carousel div.prev img,
+#carousel div.next img {
+  width: calc(var(--ImgSizeX) / 4 * 3);
+}
+
+#carousel div.prevSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+
+#carousel div.prevSecond img,
+#carousel div.nextSecond img {
+  width: calc(var(--ImgSizeX) / 2);
+}
+
+#carousel div.selected {
+  z-index: 6;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(17.5%) translateX(-50%);
+}
+
+#carousel div.nextSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 3em;
+  border: none;
+  margin: auto;
+  margin-top: .5em;
+}
+
+.buttons button {
+  background: transparent;
+  border: inherit;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 2.5em;
+  height: 3em;
+}
+
+:is(.left, .right):is(:hover, :focus) polyline {
+  stroke-width: 3;
+}
+
+:is(.left, .right):active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
