@@ -24,20 +24,6 @@ function moveToSelected(element) {
   $(prevSecond).prevAll().removeClass().addClass("hideLeft");
 }
 
-function FindPos(obj) {
-  const posElement = Array.from(obj.parentNode.children).indexOf(obj) + 1;
-  const nbElements = obj.parentNode.childElementCount;
-  console.log(
-    "Menu n°" +
-      posElement +
-      " on " +
-      nbElements +
-      " clicked (Class => " +
-      obj.className +
-      ")"
-  );
-}
-
 // Keyboard events
 $(document).keydown(function (e) {
   switch (e.which) {
@@ -56,7 +42,7 @@ $(document).keydown(function (e) {
 });
 
 // Mouse click
-$("#carousel a").click(function () {
+$("#carousel div").click(function () {
   moveToSelected($(this));
 });
 
